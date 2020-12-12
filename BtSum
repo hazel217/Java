@@ -13,6 +13,7 @@ public class BtSum {
 		int b=sc.nextInt();
 		
 		System.out.print("정수 a,를 포함한 그 사이의 모든 정수의 합은 : "+sumof(a,b)+" 입니다.");
+		sc.close();
 	}
 	static int sumof(int a,int b) {
 		int sum=0;
