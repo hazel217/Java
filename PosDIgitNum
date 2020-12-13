@@ -1,0 +1,28 @@
+package ch01;
+import java.util.*;
+//양의 정수를 입력 받고 자릿수를 출력하는 프로그램
+
+public class PosDigitNum {
+	public static void main(String[] args) {
+		System.out.println("양의 정수를 입력받고 자릿수를 출력합니다.");
+		
+		Scanner sc=new Scanner(System.in);
+		
+		int n;
+		
+		do {
+			System.out.print("n의 값:");
+			n=sc.nextInt();			
+		}while(n<=0); //n의 값이 양수일때까지 값을 입력 받는다
+	
+		int d=0;
+		int ht=1;
+		int temp=n;
+		while(temp!=0) {
+			d++;
+			temp=temp/10;
+		}
+		System.out.println(n+"의 자릿수는 "+d+"입니다.");
+		sc.close();
+	}
+}
