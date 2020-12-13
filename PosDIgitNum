@@ -16,7 +16,6 @@ public class PosDigitNum {
 		}while(n<=0); //n의 값이 양수일때까지 값을 입력 받는다
 	
 		int d=0;
-		int ht=1;
 		int temp=n;
 		while(temp!=0) {
 			d++;
