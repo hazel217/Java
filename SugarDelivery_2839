@@ -1,0 +1,32 @@
+package BaekJoon;
+import java.util.*;
+
+public class SugarDelivery_2839{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int kg=sc.nextInt();
+		
+		int pkg5=kg/5;//5kg봉지의 수
+		int pkg3=0; //3kg봉지의 수
+		int tmp=kg%5;
+		
+		if(tmp%3!=0) { //5kg봉지에 넣고 남은 양이 3의배수가 아닐때
+			while(true) {
+				pkg5-=1; //5kg짜리 봉지의 양을 하나 줄인다
+				if(pkg5<0) {//5kg미만의 양을 입력했을때
+					break;
+				}
+				tmp=kg-5*pkg5;
+				if(tmp%3==0) {//tmp양이 3의 배수일때
+					pkg3=tmp/3;
+					break;
+				}
+			}
+		}
+		else //5kg봉지에 넣고 남은 양이 3의배수
+			pkg3=tmp/3;
+		
+		System.out.println(pkg5+pkg3);
+		sc.close();
+	}
+}
