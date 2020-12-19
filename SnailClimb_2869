@@ -1,0 +1,22 @@
+package BaekJoon;
+
+import java.util.*;
+
+public class SnailClimb_2869 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		int v = sc.nextInt();
+		int day;
+
+		if (((v - a) % (a - b) == 0)) // 아침에 a만큼 올라가서 나감
+			day = (v - a) / (a - b) + 1;
+		else
+			day = (v - a) / (a - b) + 2;
+
+		System.out.print(day);
+
+		sc.close();
+	}
+}
