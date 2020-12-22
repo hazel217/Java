@@ -8,7 +8,7 @@ public class EOF_10951 {
 
 		while((input = br.readLine()) != null) {
 			
-		
+		//버퍼 리더로는..
 		}
 
 
